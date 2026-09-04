@@ -22,7 +22,8 @@ const ROWS = [
   {
     name: "Porkbun",
     status: "Standby",
-    detail: "CNAME snake / tetris / breakout / www to tinker-arcade.netlify.app, then add those names in Netlify.",
+    detail:
+      "CNAME snake / tetris / breakout / dodge / www to tinker-arcade.netlify.app, then add those names in Netlify.",
   },
 ];
 
@@ -57,6 +58,7 @@ function StackPage() {
             {`snake     CNAME  tinker-arcade.netlify.app
 tetris    CNAME  tinker-arcade.netlify.app
 breakout  CNAME  tinker-arcade.netlify.app
+dodge     CNAME  tinker-arcade.netlify.app
 www       CNAME  tinker-arcade.netlify.app`}
           </pre>
         </div>

@@ -27,10 +27,10 @@ function Home() {
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-5 py-10 sm:px-8">
         <p className="max-w-xl text-base leading-relaxed text-steel-2">
-          Three cabinets on one floor. Path routes work now. Point a Porkbun subdomain at
+          Four cabinets on one floor. Path routes work now. Point a Porkbun subdomain at
           this host and the hostname opens the matching game.
         </p>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {GAMES.map((game) => (
             <CabinetCard key={game.slug} game={game} high={scores[game.slug] ?? 0} />
           ))}

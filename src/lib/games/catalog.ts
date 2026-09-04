@@ -1,11 +1,11 @@
-export type GameSlug = "snake" | "tetris" | "breakout";
+export type GameSlug = "snake" | "tetris" | "breakout" | "dodge";
 
 export type GameMeta = {
   slug: GameSlug;
   title: string;
   year: string;
   tagline: string;
-  href: "/play/snake" | "/play/tetris" | "/play/breakout";
+  href: "/play/snake" | "/play/tetris" | "/play/breakout" | "/play/dodge";
   mark: string;
   how: string;
 };
@@ -37,6 +37,15 @@ export const GAMES: GameMeta[] = [
     href: "/play/breakout",
     mark: "B",
     how: "Mouse, touch, or ←→ to slide the paddle. Keep the ember in play.",
+  },
+  {
+    slug: "dodge",
+    title: "Dodge",
+    year: "2026",
+    tagline: "Sidestep the red. Catch the gold.",
+    href: "/play/dodge",
+    mark: "D",
+    how: "← → or A D. Drag on a phone. Red ends the run. Yellow is +10.",
   },
 ];
 
