@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coal: #12110f;
+  --color-coal-2: #1b1915;
+  --color-soot: #2a2620;
+  --color-steel: #8b939c;
+  --color-steel-2: #c5ccd4;
+  --color-ember: #e07a3d;
+  --color-ember-2: #ffb070;
+  --color-rust: #9a3b24;
+  --color-bone: #efe6d8;
+  --color-ink: #0a0908;
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+}
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    background: var(--color-coal);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .grain {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgb(224 122 61 / 0.12), transparent 55%),
+      linear-gradient(180deg, rgb(27 25 21 / 0.4), transparent 28%);
+  }
+
+  .cabinet-bezel {
+    background:
+      linear-gradient(180deg, #3a342c 0%, #1c1915 18%, #141210 82%, #0c0b09 100%);
+    box-shadow:
+      inset 0 1px 0 rgb(197 204 212 / 0.18),
+      0 18px 40px rgb(0 0 0 / 0.45);
+  }
+
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 0.18) 0px,
+      rgb(0 0 0 / 0.18) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    pointer-events: none;
+  }
+}
